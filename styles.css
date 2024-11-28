@@ -1,0 +1,103 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to top right, #A183B7, #F1B6C5, #FFEFF2);
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+footer {
+    padding: 10px 20px;
+    background-color: white;
+    text-align: left;
+}
+
+/* Styling for Beranda */
+.beranda .main-content {
+    text-align: left;
+    margin-top: 100px; /* to avoid overlap with header */
+    padding: 50px;
+}
+
+.beranda h1 {
+    font-size: 48px;
+}
+
+.beranda p {
+    font-size: 24px;
+}
+
+/* Gallery Styles */
+.galeri .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+    margin-top: 80px; /* to avoid overlap with header */
+}
+
+.foto img {
+    width: 100%;
+    display: block;
+}
+
+.foto.square img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.foto.landscape img {
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Tentang Styles */
+.tentang .tentang-content {
+    padding: 50px;
+    text-align: left;
+    margin-top: 80px;
+}
+
+.tentang h1 {
+    font-size: 48px;
+}
+
+.tentang p {
+    font-size: 20px;
+}
+
+/* Hover Effect for Showing Original Size */
+.foto img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
